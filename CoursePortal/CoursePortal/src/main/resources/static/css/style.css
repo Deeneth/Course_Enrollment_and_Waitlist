@@ -1,66 +1,123 @@
-/* General Body */
 body {
-    background-color: #f0f2f5; /* light background */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Headings */
-h1.display-4 {
-    font-weight: 700;
-    color: #007bff; /* blue for main heading */
-}
-
-h2 {
-    color: #333; /* dark gray for subheadings */
-}
-
-/* Tables */
-table {
-    width: 80%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #fff;
-}
-
-table, th, td {
-    border: 1px solid #999;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-}
-
-/* Buttons */
-button, .btn {
-    padding: 6px 12px;
-    background-color: #4CAF50;
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
     color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card {
+    transition: all 0.3s ease;
     border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover, .btn:hover {
-    background-color: #45a049;
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Large Buttons (for index page) */
-.btn-lg {
-    padding: 15px;
-    font-size: 1.2rem;
+.navbar-brand {
+    font-size: 1.5rem;
 }
 
-/* Forms */
-form {
-    margin-bottom: 20px;
+.nav-link {
+    transition: all 0.3s ease;
 }
 
-/* Footer */
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    font-size: 0.9rem;
+}
+
 footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
     border-top: 1px solid #dee2e6;
-    padding: 10px 0;
-    text-align: center;
-    color: #555;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.alert {
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.alert-info {
+    border-left-color: #0dcaf0;
+}
+
+.alert-warning {
+    border-left-color: #ffc107;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
 }
