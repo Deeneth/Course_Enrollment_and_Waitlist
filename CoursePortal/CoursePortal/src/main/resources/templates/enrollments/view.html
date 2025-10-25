@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrollments List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Enrollments</h2>
+    <a th:href="@{/enrollments/add}" class="btn btn-success mb-3">Add Enrollment</a>
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Status</th>
+            <th>Enrolled On</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="enroll : ${enrollments}">
+            <td th:text="${enroll.enrollmentId}"></td>
+            <td th:text="${enroll.student.name}"></td>
+            <td th:text="${enroll.course.name}"></td>
+            <td th:text="${enroll.status}"></td>
+            <td th:text="${#dates.format(enroll.enrolledOn, 'dd-MM-yyyy HH:mm')}"></td>
+            <td>
+                <a th:href="@{/enrollments/edit/{id}(id=${enroll.enrollmentId})}" class="btn btn-primary btn-sm">Edit</a>
+                <a th:href="@{/enrollments/delete/{id}(id=${enroll.enrollmentId})}" class="btn btn-danger btn-sm"
+                   onclick="return confirm('Are you sure?');">Delete</a>
+                <a th:href="@{/enrollments/waitlist/{id}(id=${enroll.course.courseId})}" 
+                   class="btn btn-warning btn-sm">Waitlist</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

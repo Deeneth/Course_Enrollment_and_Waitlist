@@ -1,0 +1,66 @@
+/* General Body */
+body {
+    background-color: #f0f2f5; /* light background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+/* Headings */
+h1.display-4 {
+    font-weight: 700;
+    color: #007bff; /* blue for main heading */
+}
+
+h2 {
+    color: #333; /* dark gray for subheadings */
+}
+
+/* Tables */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #999;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Buttons */
+button, .btn {
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #45a049;
+}
+
+/* Large Buttons (for index page) */
+.btn-lg {
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* Forms */
+form {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #dee2e6;
+    padding: 10px 0;
+    text-align: center;
+    color: #555;
+}
